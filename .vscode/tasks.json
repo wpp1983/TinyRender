@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "MSVC Build via Script",
+        "type": "shell",
+        "command": "${workspaceFolder}\\scripts\\build.bat",
+        "args": [
+          "${file}"
+        ],
+        "problemMatcher": ["$msCompile"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "options": {
+          "shell": {
+            "executable": "cmd.exe",
+            "args": ["/d", "/c"]
+          }
+        }
+      }
+    ]
+  }
+  
