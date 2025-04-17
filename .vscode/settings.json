@@ -1,13 +1,21 @@
 // .vscode/settings.json
 {
-    "terminal.integrated.defaultProfile.windows": "VS Dev Prompt",
-    "terminal.integrated.profiles.windows": {
-      "VS Dev Prompt": {
-        "path": "C:\\Windows\\System32\\cmd.exe",
-        "args": [
-          "/k",
-           "C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat"
-        ]
-      }
+  "terminal.integrated.profiles.windows": {
+    "VS Dev Prompt": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/k",
+        "C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat"
+      ]
     }
-  }
+  },
+
+  "editor.defaultFormatter": "xaver.clang-format",
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_fallbackStyle": "none",
+
+  "[cpp]": {
+  "editor.defaultFormatter": "xaver.clang-format"
+},
+"mesonbuild.configureOnOpen": false
+}

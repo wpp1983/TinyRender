@@ -1,25 +1,32 @@
 {
     "version": "2.0.0",
     "tasks": [
-      {
-        "label": "MSVC Build via Script",
-        "type": "shell",
-        "command": "${workspaceFolder}\\scripts\\build.bat",
-        "args": [
-          "${file}"
-        ],
-        "problemMatcher": ["$msCompile"],
-        "group": {
-          "kind": "build",
-          "isDefault": true
+        {
+            "label": "Setup Meson Builds",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/setup_meson_builds.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
         },
-        "options": {
-          "shell": {
-            "executable": "cmd.exe",
-            "args": ["/d", "/c"]
-          }
+        {
+            "label": "Ninja Build",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/build_with_msvc.bat",
+            "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
         }
-      }
     ]
-  }
+}
   

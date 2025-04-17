@@ -1,0 +1,1 @@
+option('bx_config', type: 'string', value: 'DEBUG', description: 'BX_CONFIG defines (colon separated)')
