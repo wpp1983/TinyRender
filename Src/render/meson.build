@@ -6,6 +6,7 @@ render_inc = [include_directories('.'), include_directories('rhi')]
 # Source files
 render_src = [
     'tiny_render.cpp',
+    'vertexlayout.cpp',
     'rhi/rhi_d3d12.cpp',
 ]
 
@@ -16,6 +17,7 @@ render_lib = static_library(
     cpp_args: render_cpp_args,
     dependencies: [
         bx_dep,
+        common_dep,
     ],
       link_args: [
     '-ld3d12',

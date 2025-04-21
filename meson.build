@@ -4,8 +4,10 @@ if host_machine.cpu_family() != 'x86_64'
   error('You must build this project in a 64-bit environment (x64)')
 endif
 
-
-
+# Add /Zc:__cplusplus flag for MSVC
+if meson.get_compiler('cpp').get_id() == 'msvc'
+  add_project_arguments('/Zc:__cplusplus', language: 'cpp')
+endif
 
 # 公用头文件
 common_headers = [
@@ -18,6 +20,10 @@ common_headers = [
 
 subdir('Src/ThirdParty/bx')
 
+subdir('Src/common')
+
 subdir('Src/render')
 
-subdir('Src/Samples/Sample01')
+subdir('Src/Samples/Sample01-HelloWorld')
+
+subdir('Src/Samples/Sample02-EarlyDepthTest')

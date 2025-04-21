@@ -1,7 +1,7 @@
 
 executable(
-  'cubes',
-  'cubes.cpp',
+  'hello_world',
+  'hello_world.cpp',
   cpp_args: [bx_cpp_args],
   include_directories: common_headers,
   dependencies: [
